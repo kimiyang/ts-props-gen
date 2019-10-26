@@ -14,7 +14,7 @@ yarn add ts-props-gen --dev
 npm install --save-dev ts-props-gen
 ```
 
-##CLI
+## CLI
 ```
 Usage: ts-props-gen [path]... [options]
 
@@ -27,7 +27,7 @@ Extract meta information from React components.
 
 example: ts-props-gen.js ./src/*/*.tsx -o ./result.json
 ```
-##API
+## API
 ```js
 var tsPropsGen = require('ts-props-gen');
 var propsInfo = tsPropsGen.genProps(src);

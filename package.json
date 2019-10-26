@@ -20,7 +20,21 @@
     "bin",
     "src"
   ],
-  "main": "index.js",
+  "main": "./src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:kimiyang/ts-props-gen.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kimiyang/ts-props-gen/issues"
+  },
+  "keywords": [
+    "typescript",
+    "props",
+    "react",
+    "component"
+  ],
+  "homepage": "https://github.com/kimiyang/ts-props-gen/blob/master/README.md",
   "engines": {
     "node": ">=8.10.0"
   },
