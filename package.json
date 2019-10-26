@@ -1,0 +1,29 @@
+{
+  "name": "ts-props-gen",
+  "version": "1.0.0",
+  "description": "lib to generate react props written in typescript",
+  "dependencies": {
+    "ast-types": "^0.12.4",
+    "glob": "^7.1.4",
+    "react-docgen": "^5.0.0-beta.1",
+    "strip-indent": "^3.0.0",
+    "yargs": "^14.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "ts-props-gen": "bin/ts-props-gen.js"
+  },
+  "files": [
+    "bin",
+    "src"
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=8.10.0"
+  },
+  "author": "kimiyang",
+  "license": "MIT"
+}
