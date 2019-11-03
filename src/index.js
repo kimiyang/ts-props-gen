@@ -2,7 +2,8 @@ const rd = require('react-docgen');
 const glob = require('glob');
 const fs = require('fs');
 const resolver = require('./resolver/findExportDefinition');
-const handler = require('./handler/tsHandler');
+const tsHandler = require('./handler/tsHandler');
+const defaultPropsHandler = require('./handler/defaultPropsHandler');
 
 function genProps(path) {
   const FILES = glob.sync(path);
@@ -10,7 +11,7 @@ function genProps(path) {
   FILES.forEach(filepath => {
     const src = fs.readFileSync(filepath);
     try {
-      const propsInfoArr = rd.parse(src.toString(), resolver, [handler]);
+      const propsInfoArr = rd.parse(src.toString(), resolver, [ tsHandler, defaultPropsHandler ]);
       if (propsInfoArr && propsInfoArr.length) {
         propsInfoArr.forEach(prop => {
           if (prop && prop.name) {

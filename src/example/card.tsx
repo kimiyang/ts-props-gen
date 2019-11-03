@@ -25,6 +25,11 @@ export interface CardProps {
 class Card extends React.Component<CardProps> {
   static defaultProps = {
     prefixCls: 'card',
+    onButtonClick: () => {},
+    complex: {
+      attrA: 'I am default attrA value',
+      attrB: 'I am default attrB value',
+    },
   };
 
   render() {

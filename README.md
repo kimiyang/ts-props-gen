@@ -91,7 +91,11 @@ we will get:
         "flowType": {
           "name": "string"
         },
-        "description": "no-config"
+        "description": "no-config",
+        "defaultValue": {
+          "value": "'card'",
+          "computed": false
+        }
       },
       "complex": {
         "required": false,
@@ -104,7 +108,11 @@ we will get:
           ],
           "raw": "Complex[]"
         },
-        "description": "array of complex props"
+        "description": "array of complex props",
+        "defaultValue": {
+          "value": "{\n  attrA: 'I am default attrA value',\n  attrB: 'I am default attrB value',\n}",
+          "computed": false
+        }
       },
       "complex2": {
         "required": false,
@@ -146,7 +154,11 @@ we will get:
             }
           }
         },
-        "description": ""
+        "description": "",
+        "defaultValue": {
+          "value": "() => {}",
+          "computed": false
+        }
       }
     }
   },
