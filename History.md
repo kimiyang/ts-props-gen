@@ -1,4 +1,9 @@
 
+1.1.1 / 2019-11-12
+==================
+
+  * fix: rename defaultPropsHandler from defaultPropshandler
+
 1.1.0 / 2019-11-01
 ==================
 
