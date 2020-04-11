@@ -5,13 +5,13 @@ const resolver = require('./resolver/findExportDefinition');
 const tsHandler = require('./handler/tsHandler');
 const defaultPropsHandler = require('./handler/defaultPropsHandler');
 
-function genProps(path) {
+function genProps(path, options) {
   const FILES = glob.sync(path);
   const results = {};
   FILES.forEach(filepath => {
     const src = fs.readFileSync(filepath);
     try {
-      const propsInfoArr = rd.parse(src.toString(), resolver, [ tsHandler, defaultPropsHandler ]);
+      const propsInfoArr = rd.parse(src.toString(), resolver, [ tsHandler, defaultPropsHandler ], options);
       if (propsInfoArr && propsInfoArr.length) {
         propsInfoArr.forEach(prop => {
           if (prop && prop.name) {

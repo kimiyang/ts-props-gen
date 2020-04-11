@@ -1,3 +1,8 @@
+1.2.0 / 2020-04-11
+==================
+
+  * feat: add options as sceond param for react-docgen parser
+
 
 1.1.1 / 2019-11-12
 ==================

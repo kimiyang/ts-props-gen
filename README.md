@@ -30,7 +30,8 @@ example: ts-props-gen.js ./src/*/*.tsx -o ./result.json
 ## API
 ```js
 var tsPropsGen = require('ts-props-gen');
-var propsInfo = tsPropsGen.genProps(src);
+// options will be passed to react-docgen parse function, it's optional
+var propsInfo = tsPropsGen.genProps(src, options);
 ```
 
 
