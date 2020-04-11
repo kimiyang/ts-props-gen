@@ -1,3 +1,8 @@
+1.2.1 / 2020-04-11
+==================
+
+  * fix: temp lock react-docgen version as 5.2.1 because of compatible problem with react docgen 5.3.0
+
 1.2.0 / 2020-04-11
 ==================
 
