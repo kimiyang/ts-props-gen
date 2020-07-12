@@ -17,6 +17,12 @@ function ignore() {
   return false;
 }
 
+function statelessVisitor(path) {
+  if (isStatelessComponent(path)) {
+    components.push(path);
+  }
+}
+
 function isComponentDefinition(path) {
   return (
     isReactCreateClassCall(path) ||
@@ -95,8 +101,8 @@ module.exports = function findExportedComponentDefinitions(ast) {
   }
 
   visit(ast, {
-    visitFunctionDeclaration: ignore,
-    visitFunctionExpression: ignore,
+    visitFunctionDeclaration: statelessVisitor,
+    visitFunctionExpression: statelessVisitor,
     visitClassDeclaration: ignore,
     visitClassExpression: ignore,
     visitIfStatement: ignore,

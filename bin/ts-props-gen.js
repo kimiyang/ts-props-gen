@@ -10,7 +10,7 @@ const argv = require('yargs')
 
 const fs = require('fs');
 const { genProps } = require('../src/index');
-const results = genProps(argv._[0], argv.o);
+const results = genProps(argv._[0]);
 const infoJson = JSON.stringify(results, null, 2);
 fs.writeFile(argv.o, infoJson, err => {
   if (err) throw err;
