@@ -17,12 +17,6 @@ function ignore() {
   return false;
 }
 
-function statelessVisitor(path) {
-  if (isStatelessComponent(path)) {
-    components.push(path);
-  }
-}
-
 function isComponentDefinition(path) {
   return (
     isReactCreateClassCall(path) ||
@@ -97,6 +91,13 @@ module.exports = function findExportedComponentDefinitions(ast) {
         components.push(definition);
       }
     });
+    return false;
+  }
+
+  function statelessVisitor(path) {
+    if (isStatelessComponent(path)) {
+      components.push(path);
+    }
     return false;
   }
 

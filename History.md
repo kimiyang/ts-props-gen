@@ -1,4 +1,4 @@
-1.3.0 / 2020-07-12
+1.3.0 / 2020-07-19
 ==================
 
   * feat: support function as component

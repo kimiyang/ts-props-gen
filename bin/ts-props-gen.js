@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const argv = require('yargs')
     .usage('Usage: $0 [input file] -o [output file]')
-    .example('$0 ./src/*/*.tsx -o ./result.json')
+    .example('$0 "./src/*/*.tsx -o" ./result.json')
     .help('h')
     .alias('h', 'help')
     .demandCommand(1)
