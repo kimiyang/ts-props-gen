@@ -91,7 +91,7 @@ module.exports = function flowTypeHandler(
 
   if (flowTypesPath) {
     let componentName;
-    if (t.FunctionExpression.check(path.node)) {
+    if (t.FunctionExpression.check(path.node) || t.ArrowFunctionExpression.check(path.node)) {
       componentName = path.parentPath.get('id').value.name;
     } else {
       componentName = path.get('id').value.name;

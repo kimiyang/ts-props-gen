@@ -25,7 +25,7 @@ Options:
 
 Extract meta information from React components.
 
-example: ts-props-gen.js ./src/*/*.tsx -o ./result.json
+example: ts-props-gen.js "./src/*/*.tsx" -o ./result.json
 ```
 ## API
 ```js
